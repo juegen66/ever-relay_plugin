@@ -1,0 +1,21 @@
+{
+  "name": "everrelay-third-party-sdk",
+  "private": true,
+  "scripts": {
+    "build": "pnpm build:sdk && pnpm build:demo-weather",
+    "build:sdk": "pnpm --filter @everrelay/plugin-sdk build",
+    "pack:sdk": "pnpm build:sdk && pnpm --dir packages/plugin-sdk pack",
+    "demo-weather:dev": "pnpm build:sdk && pnpm --dir examples/demo-weather-react dev",
+    "build:demo-weather": "pnpm build:sdk && pnpm --dir examples/demo-weather-react build",
+    "demo-weather:preview": "pnpm --dir examples/demo-weather-react preview",
+    "export:host-assets": "node scripts/export-host-assets.mjs",
+    "test-mcp-afs:stdio": "pnpm --dir tools/test-mcp-afs mcp",
+    "test-mcp-afs:http": "pnpm --dir tools/test-mcp-afs mcp:http",
+    "test-mcp-afs:dev:http": "pnpm --dir tools/test-mcp-afs dev:http"
+  },
+  "pnpm": {
+    "overrides": {
+      "@mastra/core": "1.14.0"
+    }
+  }
+}

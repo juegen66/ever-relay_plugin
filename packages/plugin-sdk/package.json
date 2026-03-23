@@ -1,0 +1,37 @@
+{
+  "name": "@everrelay/plugin-sdk",
+  "version": "0.1.1",
+  "description": "Vanilla JS / TypeScript helpers for EverRelay third-party iframe apps (postMessage RPC).",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "everrelay",
+    "iframe",
+    "postmessage",
+    "sdk",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}
